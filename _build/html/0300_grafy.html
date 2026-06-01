@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
@@ -341,7 +341,12 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pgfplots"><font color="#547792"> <em>pgfplots</em> </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib"><font color="#547792"> <em>matplotlib</em> </font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib"><font color="#547792"> <em>matplotlib</em> </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#export-grafu-do-formatu-png"><font color="#E37434"> Export grafu do formátu <em>png</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#export-grafu-do-formatu-tikz"><font color="#E37434"> Export grafu do formátu <em>TikZ</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dokumentacia-a-rozsirenia"><font color="#E37434"> Dokumentácia a rozšírenia </font></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -437,11 +442,8 @@
 <section id="matplotlib">
 <h2><font color='#547792'> <em>matplotlib</em> </font><a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h2>
 <p>Pre vkladanie grafov do prostredia <em>Sphinx</em> môžeme použiť populárnu knižnicu <a class="reference external" href="https://matplotlib.org/">matplotlib</a> pre jazyk Python. Výstup grafov môžeme realizovať pomocou exportu do rastrového obrázku alebo do makier <em>TikZ</em>.</p>
-<p><strong>Inštalácia</strong></p>
-<p>Pre export do makier <em>TikZ</em> musíme doinštalovať pomocnú knižnicu <em>matplot2tikz</em></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> pip install matplot2tikz
-</pre></div>
-</div>
+<section id="export-grafu-do-formatu-png">
+<h3><font color='#E37434'> Export grafu do formátu <em>png</em> </font><a class="headerlink" href="#export-grafu-do-formatu-png" title="Link to this heading">#</a></h3>
 <figure class="align-default" id="sig-01">
 <a class="reference internal image-reference" href="_images/am_signal.png"><img alt="_images/am_signal.png" src="_images/am_signal.png" style="width: 500px;" />
 </a>
@@ -452,6 +454,7 @@
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text"><font color='#84B179'> Zdrojový kód obrázku </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Doplnením do zdrojového kódu grafu uložíme graf ako rastrový obrázok.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
@@ -471,14 +474,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;AM&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text"><font color='#84B179'> Export grafu do formátu <em>png</em> </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Doplnením do zdrojového kódu grafu uložíme graf ako rastrový obrázok.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;am_signal.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;am_signal.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -492,9 +488,19 @@ Graf vytvorený v knižnici *matplotlib*.
 </pre></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></section>
+<section id="export-grafu-do-formatu-tikz">
+<h3><font color='#E37434'> Export grafu do formátu <em>TikZ</em> </font><a class="headerlink" href="#export-grafu-do-formatu-tikz" title="Link to this heading">#</a></h3>
+<div class="figure" id="id1" style="text-align: center"><p><img width="65%" src="_images/tikz-f59ecd2a547c87bd1bb4cf124a068fba7c457dd6.png" alt="Figure made with TikZ" /></p>
+<p><span class="caption-number">Obr. 20 </span><span class="caption-text">Graf vytvorený v knižnici <em>matplotlib</em></span></p>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text"><font color='#84B179'> Export grafu do formátu do makier <em>TikZ</em> </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Inštalácia</strong></p>
+<p class="sd-card-text">Pre export do makier <em>TikZ</em> musíme doinštalovať pomocnú knižnicu <em>matplot2tikz</em></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> pip install matplot2tikz
+</pre></div>
+</div>
 <p class="sd-card-text">Doplnením do zdrojového kódu grafu uložíme graf do makier <em>TikZ</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplot2tikz</span>
 <span class="n">matplot2tikz</span><span class="o">.</span><span class="n">clean_figure</span><span class="p">()</span>
@@ -509,17 +515,20 @@ Graf vytvorený v knižnici *matplotlib*.
 </pre></div>
 </div>
 </div>
-</details><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/concepts.html
-https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/matplotlib.html
-https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/tikz/tikztiming.html
-</pre></div>
-</div>
-<p><a class="reference external" href="https://tikz.dev/">https://tikz.dev/</a></p>
+</details></section>
+<section id="dokumentacia-a-rozsirenia">
+<h3><font color='#E37434'> Dokumentácia a rozšírenia </font><a class="headerlink" href="#dokumentacia-a-rozsirenia" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/concepts.html">https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/concepts.html</a></p></li>
+<li><p><a class="reference external" href="https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/matplotlib.html">https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/matplotlib.html</a></p></li>
+<li><p><a class="reference external" href="https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/tikz/tikztiming.html">https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/tikz/tikztiming.html</a></p></li>
+</ul>
 <p><strong>Galéria PGFPlots</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pgfplots.sourceforge.net/gallery.html">PGFPlots Gallery</a></p></li>
 <li><p><a class="reference external" href="https://www.overleaf.com/learn/latex/Pgfplots_package">https://www.overleaf.com/learn/latex/Pgfplots_package</a></p></li>
 </ul>
+</section>
 </section>
 </section>
 
@@ -571,7 +580,12 @@ https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/tikz/tikztimin
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pgfplots"><font color="#547792"> <em>pgfplots</em> </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib"><font color="#547792"> <em>matplotlib</em> </font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib"><font color="#547792"> <em>matplotlib</em> </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#export-grafu-do-formatu-png"><font color="#E37434"> Export grafu do formátu <em>png</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#export-grafu-do-formatu-tikz"><font color="#E37434"> Export grafu do formátu <em>TikZ</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dokumentacia-a-rozsirenia"><font color="#E37434"> Dokumentácia a rozšírenia </font></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
