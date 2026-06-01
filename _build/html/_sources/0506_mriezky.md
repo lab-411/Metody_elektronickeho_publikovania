@@ -19,19 +19,20 @@ kernelspec:
 
 #   <font color='#4B9DA9'> Mriežky </font>
 
-Instalacia
+Rozdelenie textu do mrieky 
 
-::::{grid} 2
-:::{grid-item-card}  Title 1
-Abcdefgh text
-:::
-:::{grid-item-card}  Title 2
-```{tikz} Zapojenie z CircuitMacros
-:include: ./src/test_01.tikz
-:xscale: 100
-```
-:::
-::::
+`````{grid} 2
+  ```{grid-item-card}  Title 1
+  Text v bunke
+  ```
+
+  ````{grid-item-card}  Title 2
+  ```{tikz} Zapojenie z CircuitMacros
+  :include: ./src/test_01.tikz
+  :xscale: 100
+  ```
+  ````
+`````
 
 
 
