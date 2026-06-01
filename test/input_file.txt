@@ -1,0 +1,40 @@
+
+
+digraph Farby {
+    label = " "
+    labelloc = "b"
+    layout = neato
+    size = 4.5
+    fontname = Arial
+    node [
+        shape = ellipse
+        width = 1
+        color="#00000088"
+        style = filled
+    ]
+
+    edge [len = 1.75 penwidth = 2.5 arrowhead=open]
+    start = regular
+    normalize = 0
+
+    green       [fillcolor = green        fontcolor = white]
+    white       [fillcolor = white      ]
+    blue        [fillcolor = blue         fontcolor = white]
+    red         [fillcolor = red          fontcolor = white]
+    yellow      [fillcolor = yellow     ]
+    cyan        [fillcolor = cyan       ]
+    magenta     [fillcolor = magenta      fontcolor = white]
+    deepskyblue [fillcolor = deepskyblue]
+    orange      [fillcolor = orange     ]
+    yellowgreen [fillcolor = yellowgreen]
+    deeppink    [fillcolor = deeppink     fontcolor = white]
+    purple      [fillcolor = purple       fontcolor = white]
+    springgreen [fillcolor = springgreen]
+
+    green   -> {white yellow cyan yellowgreen springgreen} [color = green  ]
+    red     -> {white yellow magenta orange deeppink }     [color = red    ]
+    yellow  -> {orange yellowgreen}                        [color = yellow ]
+    blue    -> {white cyan magenta deepskyblue purple}     [color = blue   ]
+    cyan    -> {springgreen deepskyblue}                   [color = cyan   ]
+    magenta -> {deeppink purple}                           [color = magenta]
+}

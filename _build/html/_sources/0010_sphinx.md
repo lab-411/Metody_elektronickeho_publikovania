@@ -1,0 +1,78 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+% #   <font color='#4B9DA9'> level 1 </font>
+% ##  <font color='#547792'> level 2 </font>
+% ### <font color='#E37434'> level 3 </font>
+% {dropdown} <font color='#84B179'> Text </font>
+
+#   <font color='#4B9DA9'> Publikačná platforma </font>
+
+[Sphinx](https://www.sphinx-doc.org/) je platforma pre konvertovanie obyčajného (plain) textu do rôznych výstupných formátov, pričom počas konverzie vytvára indexy, krížové odkazy, vkladá obrázky, formátuje text, matematické vzťahy a podporuje mnohé ďaľšie nástroje na tvorbu dokumentácie, blogov alebo kníh. Pôvodne bola platform *Sphinx* vytvorená pre automatické [generovanie dokumentácie](https://en.wikipedia.org/wiki/Comparison_of_documentation_generators) zo zdrojových textov v programovacom jazyku Python, v priebehu vývoja bola postupne rozširovaná o ďašie možnosti a vďaka svojej univerzálnosti integrovaná do množstva ďaľších projektov.
+
+*Sphinx* bola navrhnutá pre tvorbu dokumentov pomocou syntaxe [reStructuredText](https://docutils.sourceforge.io/docs/ref/rst/directives.html), ktorá sa neprekrýva so syntaxou programovacieho jazyka Python a je preto jednoducho použiteľná na tvorbu dokumentácie z reťazcov komentárov v zdrojovom kóde Pythonu:
+
+```{code-block} restructuredtext
+:name: lst_0010a
+:caption: Fragment textu formátovaného v *reStructuredText* 
+
+As in Python, indentation is significant in reStructuredText.
+
+.. code-block::
+:caption: A cool example
+
+  The output of this line starts with four spaces.
+
+.. code-block::
+
+      The output of this line has no spaces at the beginning.
+```
+
+Možnosti *reStructuredText* na formátovanie textu su rozsiahle, má široké možnosti formátovania textov, vytvárania tabuliek, vkladanie obrázkov, automatické generovanie obsahu ako aj integrácia so systémami programového generovania dokumentácie (napríklad *Doxygen*). Na druhej strane tento formát nie je príliš čitateľný a preto ani nie je vhodný na tvorbu všeobecných a odborných textov.
+
+Pre manuálnu tvorbu textov bola platforma *Sphinx* rozšírená o možnosť vytvárania textov vo formáte [Markdown](https://markdowncheatsheet.com/). Tento formát má jednoduchú syntax, na druhej strane neposkytuje všetky možnosti úpravy textov ako *reStructuredText*. Na platforme *Sphinx* je použitá modifikovaná verzia formátu [MyST](https://myst-parser.readthedocs.io/en/latest/index.html), ktorá umožňuje aj formátovanie textu pomocou značkovacieho jazyka [HTML](https://www.w3schools.com/html/default.asp). Zároveň umožňuje vkladať do textu publikácie bloky označované ako *direktívy* z platformy *Sphinx*, ktoré môžu reprezentovať prvky v texte so špecifickým formátovaním ako napríklad tabuľky, rozbalovacie poznámky a upozornenia, interpretované kódy programov a ďaľšie. Priamo v texte umožňuje použitie zjednodušených direktív označovaných ako *role*, ktoré sú určené pre vkladanie do textu napríklad odkazov na obrázky, matematické vzťahy, tabulky atď.. 
+
+````{code-block} md
+:name: lst_0010b
+:caption: Fragment textu formátovaného v *MyST-Markdown* 
+
+# Hlavný nadpis
+
+Štandardný text v Markdown, *šikmý text*, **tučný text**
+
+## Podnadpis
+
+* text odrážky 1
+* text odrážky 2
+
+```{code-block} python
+x=123
+print(x**2)
+```
+
+Text formátovaný pomocou <span style='color:fuchsia'> HTML značiek </span>.
+````
+
+Táto publikácia popisuje základné postupy pri vytváraní publikácií na platforme *Sphinx* textami fomátovanými v *MyST*. Vzhľadom k rozsiahlosti a možnostiam tejto platformy nie je možné popísať všetky možnostim ktoré platforma poskytuje, čitateľa preto pri špecifických požiadavkách odkážeme na štúdium dostupnej literatúry uvedenej v [odkazoch](0700_odkazy.md).
+
+##  <font color='#547792'>Inštalácia a konfigurácia </font>
+
+Nasledujúce kapitoly sú venované inštalácii platformy, vytvoreniu základnej štruktúry publikácie a konfigurácii doplnkov a rozšírení pre generovanie publikácie vo formáte HTML. 
+
+```{toctree}
+:titlesonly: True
+0012_sphinx_install.md
+0014_sphinx_predloha.md
+```
+

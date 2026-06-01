@@ -1,0 +1,4 @@
+| Meno | Priezvisko |
+| :---: | :---:|
+| Ježibaba | Škaredá  |
+| Šrek     | Bažinatý |

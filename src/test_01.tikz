@@ -1,0 +1,209 @@
+\begin{tikzpicture}[scale=2.54]
+% dpic version 2018.08.15 option -g for TikZ and PGF 1.01
+\ifx\dpiclw\undefined\newdimen\dpiclw\fi
+\global\def\dpicdraw{\draw[line width=\dpiclw]}
+\global\def\dpicstop{;}
+\dpiclw=0.8bp
+\dpiclw=0.8bp
+\coordinate (T1) at (1.574803,1.181102);
+\coordinate (T1 M4_xyO) at (1.699803,1.181102);
+\coordinate (T1 E) at (1.699803,0.787402);
+\dpicdraw (1.699803,0.787402)
+ --(1.699803,1.031102)
+ --(1.696099,1.032769)\dpicstop
+\coordinate (T1 C) at (1.699803,1.574803);
+\dpicdraw (1.699803,1.574803)
+ --(1.699803,1.331102)
+ --(1.696099,1.329436)\dpicstop
+\coordinate (T1 Bulk) at (1.499803,1.081102);
+\dpicdraw (1.499803,1.081102)
+ --(1.499803,1.281102)\dpicstop
+\coordinate (T1 B) at (1.374803,1.181102);
+\dpicdraw (1.374803,1.181102)
+ --(1.499803,1.181102)\dpicstop
+\coordinate (T1 E0) at (1.699803,1.031102);
+\coordinate (T1 Em0) at (1.699803,1.031102);
+\dpicdraw (1.699803,1.031102)
+ --(1.499803,1.121102)\dpicstop
+\filldraw[line width=0bp](1.562411,1.062468)
+ --(1.649803,1.053602)
+ --(1.585209,1.113131) --cycle\dpicstop
+\dpicdraw (1.633782,1.060812)
+ --(1.549803,1.098602)\dpicstop
+\coordinate (T1 C0) at (1.699803,1.331102);
+\coordinate (T1 Cm0) at (1.699803,1.331102);
+\dpicdraw (1.699803,1.331102)
+ --(1.499803,1.241102)\dpicstop
+\coordinate (T1 A1) at (1.574803,1.181102);
+\dpicdraw (1.374803,1.181102)
+ ..controls (1.374803,1.291559) and (1.464346,1.381102)
+ ..(1.574803,1.381102)
+ ..controls (1.68526,1.381102) and (1.774803,1.291559)
+ ..(1.774803,1.181102)\dpicstop
+\coordinate (T1 L1) at (1.774803,1.181102);
+\dpicdraw (1.774803,1.181102)
+ --(1.774803,1.181102)\dpicstop
+\coordinate (T1 A2) at (1.574803,1.181102);
+\dpicdraw (1.774803,1.181102)
+ ..controls (1.774803,0.914436) and (1.374803,0.914436)
+ ..(1.374803,1.181102)\dpicstop
+\coordinate (T1 L2) at (1.374803,1.181102);
+\dpicdraw (1.374803,1.181102)
+ --(1.374803,1.181102)\dpicstop
+\dpicdraw (1.699803,0.787402)
+ --(1.699803,0.617126)\dpicstop
+\dpicdraw (1.699803,0.367126)
+ --(1.749803,0.367126)
+ --(1.749803,0.617126)
+ --(1.649803,0.617126)
+ --(1.649803,0.367126)
+ --(1.699803,0.367126)\dpicstop
+\dpicdraw (1.699803,0.367126)
+ --(1.699803,0.19685)\dpicstop
+\draw (1.649803,0.492126) node[left=-0.787402bp]{$ R_e$};
+\coordinate (GN) at (1.699803,0.147638);
+\coordinate (GN DD) at (1.699803,0.098425);
+\coordinate (GN WW) at (1.601378,0.19685);
+\coordinate (GN L) at (1.699803,0.19685);
+\dpicdraw (1.699803,0.19685)
+ --(1.699803,0.098425)\dpicstop
+\dpiclw=2bp
+\dpicdraw (1.601378,0.098425)
+ --(1.798228,0.098425)\dpicstop
+\dpiclw=0.8bp
+\coordinate (RC) at (1.699803,1.574803);
+\dpicdraw (1.699803,1.574803)
+ --(1.699803,1.745079)\dpicstop
+\dpicdraw (1.699803,1.995079)
+ --(1.649803,1.995079)
+ --(1.649803,1.745079)
+ --(1.749803,1.745079)
+ --(1.749803,1.995079)
+ --(1.699803,1.995079)\dpicstop
+\dpicdraw (1.699803,1.995079)
+ --(1.699803,2.165354)\dpicstop
+\draw (1.649803,1.870079) node[left=-0.787402bp]{$ R_c$};
+\coordinate (DC) at (1.699803,2.165354);
+\dpicdraw[fill=black](1.699803,2.165354) circle (0.007874in)\dpicstop
+\coordinate (M4Ss) at (2.290354,1.574803);
+\coordinate (M4Se) at (2.487205,1.574803);
+\dpicdraw (1.699803,2.165354)
+ --(1.699803,2.36063)\dpicstop
+\dpicdraw (1.699803,2.41063) circle (0.019685in)\dpicstop
+\draw (1.699803,2.46063) node[above=-0.787402bp]{$ V_+$};
+\definecolor{lcspec}{rgb}{1.00000,0.00000,0.00000}%
+\color[rgb]{1.00000,0.00000,0.00000}%
+\global\let\dpiclidraw=\dpicdraw\global\let\dpicfidraw=\filldraw
+\global\def\dpicdraw{\dpiclidraw[color=lcspec]}
+\global\def\filldraw{\dpicfidraw[color=lcspec]}
+\dpicdraw (1.374803,1.181102)
+ --(1.059843,1.181102)\dpicstop
+\coordinate (D1) at (1.059843,1.181102);
+\definecolor{fcspec}{rgb}{1.00000,0.00000,0.00000}%
+\global\def\dpicstop{--}
+\global\let\dpicfdraw=\dpicdraw\global\def\dpicdraw{}
+\path[fill=fcspec]
+\dpicdraw (1.059843,1.181102) circle (0.007874in)\dpicstop
+cycle; \global\let\dpicdraw=\dpicfdraw\global\def\dpicstop{;}
+\dpicdraw (1.059843,1.181102) circle (0.007874in)\dpicstop
+\draw (1.059843,1.181102) node[above right=-0.787402bp]{$ V_b$};
+\dpicdraw (1.059843,1.181102)
+ --(1.059843,0.813976)\dpicstop
+\dpicdraw (1.059843,0.563976)
+ --(1.109843,0.563976)
+ --(1.109843,0.813976)
+ --(1.009843,0.813976)
+ --(1.009843,0.563976)
+ --(1.059843,0.563976)\dpicstop
+\dpicdraw (1.059843,0.563976)
+ --(1.059843,0.19685)\dpicstop
+\draw (1.009843,0.688976) node[left=-0.787402bp]{$ R_{b1}$};
+\coordinate (DD) at (1.059843,0.098425);
+\coordinate (WW) at (0.961417,0.19685);
+\coordinate (L) at (1.059843,0.19685);
+\dpicdraw (1.059843,0.19685)
+ --(1.059843,0.098425)\dpicstop
+\dpiclw=2bp
+\dpicdraw (0.961417,0.098425)
+ --(1.158268,0.098425)\dpicstop
+\dpiclw=0.8bp
+\definecolor{lcspec}{rgb}{0.00000,0.00000,0.00000}%
+\color[rgb]{0.00000,0.00000,0.00000}%
+\dpicdraw (1.059843,1.181102)
+ --(1.059843,1.548228)\dpicstop
+\dpicdraw (1.059843,1.798228)
+ --(1.009843,1.798228)
+ --(1.009843,1.548228)
+ --(1.109843,1.548228)
+ --(1.109843,1.798228)
+ --(1.059843,1.798228)\dpicstop
+\dpicdraw (1.059843,1.798228)
+ --(1.059843,2.165354)\dpicstop
+\draw (1.009843,1.673228) node[left=-0.787402bp]{$ R_{b2}$};
+\dpicdraw (1.059843,2.165354)
+ --(1.699803,2.165354)\dpicstop
+\dpicdraw (1.059843,1.181102)
+ --(0.789567,1.181102)\dpicstop
+\dpicdraw (0.789567,1.264436)
+ --(0.789567,1.097769)\dpicstop
+\dpicdraw (0.739567,1.264436)
+ --(0.739567,1.097769)\dpicstop
+\dpicdraw (0.739567,1.181102)
+ --(0.469291,1.181102)\dpicstop
+\draw (0.764567,1.264436) node[above=-0.787402bp]{$ C_{b}$};
+\dpicdraw (0.469291,1.181102)
+ --(0.372441,1.181102)\dpicstop
+\dpicdraw (0.322441,1.181102) circle (0.019685in)\dpicstop
+\draw (0.322441,1.231102) node[above=-0.787402bp]{$ V_{in}$};
+\coordinate (D2) at (1.699803,1.574803);
+\definecolor{fcspec}{rgb}{0.00000,0.00000,0.00000}%
+\global\def\dpicstop{--}
+\global\let\dpicfdraw=\dpicdraw\global\def\dpicdraw{}
+\path[fill=fcspec]
+\dpicdraw (1.699803,1.574803) circle (0.007874in)\dpicstop
+cycle; \global\let\dpicdraw=\dpicfdraw\global\def\dpicstop{;}
+\dpicdraw (1.699803,1.574803) circle (0.007874in)\dpicstop
+\draw (1.699803,1.574803) node[left=-0.787402bp]{$ V_c$};
+\dpicdraw (1.699803,1.574803)
+ --(1.970079,1.574803)\dpicstop
+\dpicdraw (1.970079,1.49147)
+ --(1.970079,1.658136)\dpicstop
+\dpicdraw (2.020079,1.49147)
+ --(2.020079,1.658136)\dpicstop
+\dpicdraw (2.020079,1.574803)
+ --(2.290354,1.574803)\dpicstop
+\draw (1.995079,1.658136) node[above=-0.787402bp]{$ C_{c}$};
+\dpicdraw (2.290354,1.574803)
+ --(2.387205,1.574803)\dpicstop
+\dpicdraw (2.437205,1.574803) circle (0.019685in)\dpicstop
+\draw (2.437205,1.624803) node[above=-0.787402bp]{$ V_{out}$};
+\coordinate (D3) at (1.699803,0.787402);
+\definecolor{fcspec}{rgb}{0.00000,0.00000,0.00000}%
+\global\def\dpicstop{--}
+\global\let\dpicfdraw=\dpicdraw\global\def\dpicdraw{}
+\path[fill=fcspec]
+\dpicdraw (1.699803,0.787402) circle (0.007874in)\dpicstop
+cycle; \global\let\dpicdraw=\dpicfdraw\global\def\dpicstop{;}
+\dpicdraw (1.699803,0.787402) circle (0.007874in)\dpicstop
+\draw (1.699803,0.787402) node[left=-0.787402bp]{$ V_e$};
+\dpicdraw (1.699803,0.787402)
+ --(2.093504,0.787402)\dpicstop
+\dpicdraw (2.093504,0.787402)
+ --(2.093504,0.517126)\dpicstop
+\dpicdraw (2.010171,0.517126)
+ --(2.176837,0.517126)\dpicstop
+\dpicdraw (2.010171,0.467126)
+ --(2.176837,0.467126)\dpicstop
+\dpicdraw (2.093504,0.467126)
+ --(2.093504,0.19685)\dpicstop
+\draw (2.176837,0.492126) node[right=-0.787402bp]{$ C_{e}$};
+\coordinate (DD) at (2.093504,0.098425);
+\coordinate (WW) at (1.995079,0.19685);
+\coordinate (L) at (2.093504,0.19685);
+\dpicdraw (2.093504,0.19685)
+ --(2.093504,0.098425)\dpicstop
+\dpiclw=2bp
+\dpicdraw (1.995079,0.098425)
+ --(2.191929,0.098425)\dpicstop
+\dpiclw=0.8bp
+\end{tikzpicture}

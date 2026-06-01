@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Matematické výrazy &#8212; Metódy elektronického publikovania 1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=d2a3a1a5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '0204_matematika';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rastrová grafika" href="0302_raster.html" />
+    <link rel="prev" title="Zdrojové kódy" href="0208_zdrojove_kody.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_411.png" class="logo__image only-light" alt="Metódy elektronického publikovania 1 documentation - Home"/>
+    <img src="_static/logo_411.png" class="logo__image only-dark pst-js-only" alt="Metódy elektronického publikovania 1 documentation - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0005_publikovanie.html"><font color="#4B9DA9"> Elektronické publikácie </font></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="0010_sphinx.html"><font color="#4B9DA9"> Publikačná platforma </font></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0012_sphinx_install.html"><font color="#4B9DA9"> Inštalácia </font></a></li>
+<li class="toctree-l2"><a class="reference internal" href="0014_sphinx_predloha.html"><font color="#4B9DA9"> Konfigurácia </font></a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Typografia</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0202_formatovanie.html"><font color="#4B9DA9"> Formátovanie textu</font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0210_obsah.html"><font color="#4B9DA9"> Obsah </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0212_referencie.html"><font color="#4B9DA9"> Odkazy a referencie </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0206_tabulky.html"><font color="#4B9DA9"> Tabuľky </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0208_zdrojove_kody.html"><font color="#4B9DA9"> Zdrojové kódy </font></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><font color="#4B9DA9"> Matematické výrazy </font></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Grafika</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0302_raster.html"><font color="#4B9DA9"> Rastrová grafika </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0304_vektor.html"><font color="#4B9DA9"> Vektorová grafika </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0305_plantuml.html"><font color="#4B9DA9"> Diagramy </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0310_graphviz.html"><font color="#4B9DA9"> Orientované grafy </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0300_grafy.html"><font color="#4B9DA9"> Vizualizácia dát </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0315_schemy.html"><font color="#4B9DA9"> Elektronické zapojenia </font></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Doplnky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0500_poznamky.html"><font color="#4B9DA9"> Upozornenia </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0504_zalozky.html"><font color="#4B9DA9"> Záložky </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0506_mriezky.html"><font color="#4B9DA9"> Mriežky </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0508_karty.html"><font color="#4B9DA9"> Karty </font></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prílohy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0650_prikazy.html"><font color="#4B9DA9"> Direktívy </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0600_publikovanie.html"><font color="#4B9DA9"> Publikovanie </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0700_odkazy.html"><font color="#4B9DA9"> Odkazy </font></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/0204_matematika.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><font color='#4B9DA9'> Matematické výrazy </font></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vkladanie-vyrazov"><font color="#547792"> Vkladanie výrazov </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math"><font color="#E37434"> <em>{math}</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dollarmath"><font color="#E37434"> <em>dollarmath</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amsmath"><font color="#E37434"> <em>amsmath</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#display"><font color="#E37434"> <em>display</em> </font></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upravy"><font color="#547792"> Úpravy  </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#farby"><font color="#E37434"> <em>Farby</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ramiky"><font color="#E37434"> <em>Rámiky</em> </font></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="matematicke-vyrazy">
+<h1><font color='#4B9DA9'> Matematické výrazy </font><a class="headerlink" href="#matematicke-vyrazy" title="Link to this heading">#</a></h1>
+<p>Platforma <em>Sphinx</em> využíva pre vkladanie matematickych výrazov do textu typografický systém <a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX</a>. V matematickom móde môžeme využívať všetky vlastnosti a možnosti typografického systému.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9c53eb5f-131c-4e32-a37d-901d42449826">
+<span class="eqno">(1)<a class="headerlink" href="#equation-9c53eb5f-131c-4e32-a37d-901d42449826" title="Permalink to this equation">#</a></span>\[\begin{align}
+\nabla \cdot \mathbf{E} \,\,\, &amp;= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \mathbf{B} \,\,\, &amp;= 0 \\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial \mathbf{B}}{\partial t} \\
+\nabla \times \mathbf{B} &amp;= \mu_0 \left(\mathbf{J} + \varepsilon_0  \frac{\partial \mathbf{E}}{\partial t} \right)
+\end{align}\]</div>
+<section id="vkladanie-vyrazov">
+<h2><font color='#547792'> Vkladanie výrazov </font><a class="headerlink" href="#vkladanie-vyrazov" title="Link to this heading">#</a></h2>
+<p>Matematické výrazy je možné do textu dokumentu vložiť niekoľkými spôsobmi, použitím direktívy <strong>{math}</strong>, zjednodušeným postupom pomocou znakov <code class="docutils literal notranslate"><span class="pre">\$</span></code> ako aj primym vložením matematických výrazov formátovaných v typografickom systéme LaTeX.</p>
+<section id="math">
+<h3><font color='#E37434'> <em>{math}</em> </font><a class="headerlink" href="#math" title="Link to this heading">#</a></h3>
+<p>Direktíva <strong>{math}</strong> je určený pre písanie rovníc alebo sústav rovníc. Je ekvivalentom príkazu <strong>align</strong> v systéme LaTeX. Rovnice sú oddelené znakmi <code class="docutils literal notranslate"><span class="pre">\\</span></code> a vzájomne zarovnané znakom <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.   V in-line texte môžeme zadať matematický výraz pomocou role<code class="docutils literal notranslate"><span class="pre">{math}`vyraz`</span></code>.</p>
+<p><strong>Formát direktívy</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  ```{math}
+  :label: ref         - referencia  
+     equ_1 \\         - matematické vzťahy vo formáte LaTeX
+     equ_2 \\
+     ...
+  ```
+</pre></div>
+</div>
+<p>Na sústavu rovníc sa môžeme odkazovať pomocou referencie v tvare role <code class="docutils literal notranslate"><span class="pre">{eq}`ref`</span> </code>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><font color='#84B179'> Použitie direktívy {math} </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Vzťah medzi amplitúdou {math}`A`, fázou {math}`\phi` 
+  a zložkami {math}`I` a {math}`Q` popisuje vzťah {eq}`ref1`:
+  
+  ```{math}
+  :label: ref1
+     A &amp;= \sqrt{I^2 + Q^2} \\
+  \phi &amp;= \arctan{\frac{Q}{I}}
+  ```
+</pre></div>
+</div>
+<p class="sd-card-text">Vzťah medzi amplitúdou <span class="math notranslate nohighlight">\(A\)</span>, fázou <span class="math notranslate nohighlight">\(\phi\)</span> a zložkami <span class="math notranslate nohighlight">\(I\)</span> a <span class="math notranslate nohighlight">\(Q\)</span> popisuje vzťah <a class="reference internal" href="#equation-ref1">(2)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-ref1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ref1" title="Link to this equation">#</a></span>\[\begin{split}A &amp;= \sqrt{I^2 + Q^2} \\
+\phi &amp;= \arctan{\frac{Q}{I}}\end{split}\]</div>
+</div>
+</details></section>
+<section id="dollarmath">
+<h3><font color='#E37434'> <em>dollarmath</em> </font><a class="headerlink" href="#dollarmath" title="Link to this heading">#</a></h3>
+<p><em>Markdown</em> rozšírenie <a class="reference internal" href="0014_sphinx_predloha.html"><span class="std std-doc">dollarmath</span></a> umožňuje jednoduché zadávanie matematických výrazov v texte pomocou reťazca <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">výraz</span> <span class="pre">$</span></code> a sústavy rovníc vzájomne zarovnaných znakom <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> v tvare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  $$
+     equ_1 \\
+     equ_2 \\
+     ...
+  $$(referencia)
+</pre></div>
+</div>
+<p>Na sústavu rovníc sa môžeme odkazovať podobne ako v direktíve <em>{math}</em> pomocou referencie v tvare <code class="docutils literal notranslate"><span class="pre">{eq}`referencia`</span> </code>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><font color='#84B179'> Použitie rozšírenia $ …$ a $$ … $$ </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Vzťah medzi aplitúdou $A$, fázou $\phi$ a zložkami $I$ a $Q4 
+  popisuje vzťah {eq}`amp_phase`:
+  
+  $$
+     A &amp;= \sqrt{I^2 + Q^2} \\
+  \phi &amp;= \arctan{\frac{Q}{I}}
+  $$(ref2)
+</pre></div>
+</div>
+<p class="sd-card-text">Vzťah medzi amplitúdou <span class="math notranslate nohighlight">\(A\)</span>, fázou <span class="math notranslate nohighlight">\(\phi\)</span> a zložkami <span class="math notranslate nohighlight">\(I\)</span> a <span class="math notranslate nohighlight">\(Q\)</span> popisuje vzťah <a class="reference internal" href="#equation-ref2">(3)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-ref2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-ref2" title="Link to this equation">#</a></span>\[\begin{split}
+A &amp;= \sqrt{I^2 + Q^2} \\
+\phi &amp;= \arctan{\frac{Q}{I}}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="amsmath">
+<h3><font color='#E37434'> <em>amsmath</em> </font><a class="headerlink" href="#amsmath" title="Link to this heading">#</a></h3>
+<p><em>Markdown</em> rozšírenie <a class="reference internal" href="0014_sphinx_predloha.html"><span class="std std-doc">amsmath</span></a> umožňuje zadávať matematické výrazy pomocou syntaxe LaTeX s využitím jeho prostredí <em>equation, cases, multiline, gather, align, alignat, flalign, matrix, pmatrix, bmatrix, Bmatrix, vmatrix, Vmatrix, eqnarray</em>, Podrobný popis vlastností rozšírenia je v <a class="reference download internal" download="" href="_downloads/a8cc52330fdb0ce86ee0dcbf257b0d0a/amsldoc.pdf"><span class="xref download myst">dokumentácii</span></a>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  \begin{equation} 
+     y =  f(a)+\frac {f&#39;(a)}{1!} (x-a) + 
+      \frac{f&#39;&#39;(a)}{2!} (x-a)^2 + \
+      \frac{f^{(3)}(a)}{3!}(x-a)^3 + \cdots
+  \end{equation}
+</pre></div>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c4497808-43ed-4d00-8236-e97cdb1fade3">
+<span class="eqno">(4)<a class="headerlink" href="#equation-c4497808-43ed-4d00-8236-e97cdb1fade3" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+  f(a)+\frac {f'(a)}{1!} (x-a) + 
+  \frac{f''(a)}{2!} (x-a)^2 + \
+  \frac{f^{(3)}(a)}{3!}(x-a)^3 + \cdots
+\end{equation}      \]</div>
+<div class="note admonition">
+<p class="admonition-title">Poznámka</p>
+<p>K rovniciam v tomto rozšíreni je možné priradiť poradové číslo rovnici podľa syntaxe LaTeX, priradenie referencie pomocou <code class="docutils literal notranslate"><span class="pre">\label{eq:...}</span></code> nie v aktuálnej verzii <em>Sphinx</em> rozpoznávané a preto nie možné sa na toto poradové číslo odkazovať pomocou príkazu <code class="docutils literal notranslate"><span class="pre">{eg}...</span></code>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  \begin{equation} 
+  \label{eq:...}
+  
+  \end{equation}
+</pre></div>
+</div>
+</div>
+</section>
+<section id="display">
+<h3><font color='#E37434'> <em>display</em> </font><a class="headerlink" href="#display" title="Link to this heading">#</a></h3>
+<p>Rozšírenie <em>myst-nb</em> umožňuje použitie knižníc Jupyteru pre interpretáciu kódy ako buniek notebooku. Interpretovaný text je automaticky pokladaný za popis v matematickom móde.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Latex</span>
+<span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">      \text{Riešenie rovnice  } \,\,</span>
+<span class="s2">      x = \frac{-b \pm \sqrt{b^2 - 4ac}}</span><span class="si">{2a}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\text{Riešenie rovnice  } \,\,
+      x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</div>
+</div>
+</div>
+<p>Ak nechceme v texte zobraziť bunku so zdrojovým kódom, je potrebné doplniť do bloku parameter <strong>:tags: [“remove-cell”]</strong>.</p>
+</section>
+</section>
+<section id="upravy">
+<h2><font color='#547792'> Úpravy  </font><a class="headerlink" href="#upravy" title="Link to this heading">#</a></h2>
+<section id="farby">
+<h3><font color='#E37434'> <em>Farby</em> </font><a class="headerlink" href="#farby" title="Link to this heading">#</a></h3>
+<p>Pre zobrazenie matematických vzťahov vo farbe, celých alebo len ich častí, môžeme použiť LaTeX prostredie <a class="reference download internal" download="" href="_downloads/00307155c83a724b4d22a03a37e293bd/xcolor.pdf"><span class="xref download myst">xcolor</span></a>, ktoré aktivujeme zaradením do kompilácie matematických výrazov  pomocou slovníka <strong>latex_elements = { … }</strong> do súboru <a class="reference download internal" download="" href="_downloads/fb0d0d7ff27f33697ba3b787ec894677/conf.py"><span class="xref download myst">conf.py</span></a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  latex_elements = {
+        ...
+        &#39;extrapackages&#39;: r&#39;\usepackage{xcolor}&#39;,
+        ...
+  }
+</pre></div>
+</div>
+<p>Farebné zvýraznenie potom dosiahneme použitím príkazu <strong>\color{…}</strong> v zadaní matematického výrazu</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  \begin{equation} 
+      y = f(a) + \
+      \color{blue}  \frac {f&#39;(a)}{1!} (x-a) + 
+      \color{green} \frac{f&#39;&#39;(a)}{2!} (x-a)^2 + \
+      \color{red}   \frac{f^{(3)}(a)}{3!}(x-a)^3 + \cdots
+  \end{equation} 
+</pre></div>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0a1a6b88-5afd-490a-ba0c-b0fc5da3e22a">
+<span class="eqno">(5)<a class="headerlink" href="#equation-0a1a6b88-5afd-490a-ba0c-b0fc5da3e22a" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+y = f(a)+\color{blue} + \frac {f'(a)}{1!} (x-a) + 
+\color{green} \frac{f''(a)}{2!} (x-a)^2 + \
+\color{red}  \frac{f^{(3)}(a)}{3!}(x-a)^3 + \cdots
+\end{equation} \]</div>
+</section>
+<section id="ramiky">
+<h3><font color='#E37434'> <em>Rámiky</em> </font><a class="headerlink" href="#ramiky" title="Link to this heading">#</a></h3>
+<p>Pomocou LaTeX prostredia <a class="reference download internal" download="" href="_downloads/0c22a333c4867711157c19622aa20494/fbox.pdf"><span class="xref download myst">fbox</span></a> môžeme vykresliť matematické vzťahy v rámiku. Prostredie je potrebné aktivovať v súbore <a class="reference download internal" download="" href="_downloads/fb0d0d7ff27f33697ba3b787ec894677/conf.py"><span class="xref download myst">conf.py</span></a>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  latex_elements = {
+        ...
+        &#39;extrapackages&#39;: r&#39;\usepackage{fbox}&#39;,
+        ...
+  }
+</pre></div>
+</div>
+<p>Argumentom prostredia <strong>\fbox{…}</strong> je textový reťazec, pre matematické vťahy musíme použiť dolárovú konvenciu</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  \begin{equation*}
+      \fbox{
+          \color{red} $q = \sqrt{\sin(\alpha^2) + \cos(\beta^2)}$
+      }
+  \end{equation*}
+</pre></div>
+</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\fbox{
+      \color{red}  $q = \sqrt{\sin(\alpha^2) + \cos(\beta^2)}$
+      }
+\end{equation*}\]</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0208_zdrojove_kody.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><font color='#4B9DA9'> Zdrojové kódy </font></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="0302_raster.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><font color='#4B9DA9'> Rastrová grafika </font></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vkladanie-vyrazov"><font color="#547792"> Vkladanie výrazov </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math"><font color="#E37434"> <em>{math}</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dollarmath"><font color="#E37434"> <em>dollarmath</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amsmath"><font color="#E37434"> <em>amsmath</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#display"><font color="#E37434"> <em>display</em> </font></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upravy"><font color="#547792"> Úpravy  </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#farby"><font color="#E37434"> <em>Farby</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ramiky"><font color="#E37434"> <em>Rámiky</em> </font></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Fabo, Michal Kuba
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, LAB - 411.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

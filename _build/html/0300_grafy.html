@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Vizualizácia dát &#8212; Metódy elektronického publikovania 1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=d2a3a1a5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '0300_grafy';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Elektronické zapojenia" href="0315_schemy.html" />
+    <link rel="prev" title="Orientované grafy" href="0310_graphviz.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_411.png" class="logo__image only-light" alt="Metódy elektronického publikovania 1 documentation - Home"/>
+    <img src="_static/logo_411.png" class="logo__image only-dark pst-js-only" alt="Metódy elektronického publikovania 1 documentation - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0005_publikovanie.html"><font color="#4B9DA9"> Elektronické publikácie </font></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="0010_sphinx.html"><font color="#4B9DA9"> Publikačná platforma </font></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0012_sphinx_install.html"><font color="#4B9DA9"> Inštalácia </font></a></li>
+<li class="toctree-l2"><a class="reference internal" href="0014_sphinx_predloha.html"><font color="#4B9DA9"> Konfigurácia </font></a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Typografia</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0202_formatovanie.html"><font color="#4B9DA9"> Formátovanie textu</font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0210_obsah.html"><font color="#4B9DA9"> Obsah </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0212_referencie.html"><font color="#4B9DA9"> Odkazy a referencie </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0206_tabulky.html"><font color="#4B9DA9"> Tabuľky </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0208_zdrojove_kody.html"><font color="#4B9DA9"> Zdrojové kódy </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0204_matematika.html"><font color="#4B9DA9"> Matematické výrazy </font></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Grafika</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0302_raster.html"><font color="#4B9DA9"> Rastrová grafika </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0304_vektor.html"><font color="#4B9DA9"> Vektorová grafika </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0305_plantuml.html"><font color="#4B9DA9"> Diagramy </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0310_graphviz.html"><font color="#4B9DA9"> Orientované grafy </font></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><font color="#4B9DA9"> Vizualizácia dát </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0315_schemy.html"><font color="#4B9DA9"> Elektronické zapojenia </font></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Doplnky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0500_poznamky.html"><font color="#4B9DA9"> Upozornenia </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0504_zalozky.html"><font color="#4B9DA9"> Záložky </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0506_mriezky.html"><font color="#4B9DA9"> Mriežky </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0508_karty.html"><font color="#4B9DA9"> Karty </font></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prílohy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0650_prikazy.html"><font color="#4B9DA9"> Direktívy </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0600_publikovanie.html"><font color="#4B9DA9"> Publikovanie </font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0700_odkazy.html"><font color="#4B9DA9"> Odkazy </font></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/0300_grafy.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><font color='#4B9DA9'> Vizualizácia dát </font></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pgfplots"><font color="#547792"> <em>pgfplots</em> </font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib"><font color="#547792"> <em>matplotlib</em> </font></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vizualizacia-dat">
+<h1><font color='#4B9DA9'> Vizualizácia dát </font><a class="headerlink" href="#vizualizacia-dat" title="Link to this heading">#</a></h1>
+<p>Zobrazenie numerických údajov v grafickej forme je dôležitým krokom pri analýze, spracovaní a interpretácií dát. Správne zvolená forma grafického zobrazenie môže zobraziť vzťahy a javy, ktoré nemusia byť pri zobrazení v číselnej forme zjavné. Pre prevod numerických dát do grafickej formy existuje veľa programových prostriedkov, od univerzálnych prostredí a knižníc po špecializované a tématicky zamerané systémy. V prostredí <em>Sphinx</em> môžeme jednoduchšie grafy vytvárať priamo v texte dokumentu pomocou makier <em>pgfplots</em>, pre komplikovanejšie grafy môžeme použiť programové prostriedky, ktoré umožňujú export do vhodného bitového alebo vektorového formátu.</p>
+<section id="pgfplots">
+<h2><font color='#547792'> <em>pgfplots</em> </font><a class="headerlink" href="#pgfplots" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://github.com/pgf-tikz/pgfplots">pgfplots</a> je nadstavbou knižnice makier <em>PGF/TikZ</em> pre kreslenie grafov. Knižnica obsahuje makrá pre kreslenie grafov, ktoré značne uľahčujú prácu so samotnou knižnicou <em>TikZ</em>.  Ku knižnici je dostupná rozsiahla <a class="reference download internal" download="" href="_downloads/c2c92395e2ae09f7038aacd18e03e4f7/pgfplots.pdf"><span class="xref download myst">dokumentácia</span></a> ako aj množstvo príkladov použitia v on-line <a class="reference external" href="https://pgfplots.sourceforge.net/gallery.html">galériách</a>.</p>
+<p><strong>Inštalácia</strong></p>
+<p>Knižnica <em>pgfplots</em> je súčasťiu distribúcie <em>LaTeX</em> a do prostredia <em>Sphinx</em> ju zaradíme ako doplnkový balík pre <em>LaTeX</em> v súbore <em><a class="reference external" href="http://config.py">config.py</a></em> v slovníku <em>latex_elements</em></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>latex_elements = {
+  ...
+  &#39;extrapackages&#39;: r&#39;\usepackage{pgfplots}&#39;,
+  ...
+}
+</pre></div>
+</div>
+<div class="figure" style="text-align: center"><p><img  src="_images/tikz-70a299e0c902f2ae714399d8ad8284050625558c.png" alt="Figure made with TikZ" /></p>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><font color='#84B179'> Zdrojový kód obrázku </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{tikz}
+\begin{tikzpicture}
+
+  \pgfplotsset{
+      small/.style={                            % nastavenie formatovania grafu
+      width=7.0cm,                              % sirka
+      height=,                                  % vyska  - automaticky
+      tick label style={font=\scriptsize},      % velkost pisma na osiach 
+      label style={font=\footnotesize},         % velkost pisma popisu osi 
+      legend style={font=\scriptsize},          % velkost pisma legendy
+      title style={font=\scriptsize},           % velkost pisma nadpisu grafu
+      max space between ticks=25,               % hustota mriezky grafu            
+      },
+  }
+
+  \begin{axis}[                                 % nastavenie parametrov osi a obsahu grafu
+      small,                                    % vyber formatovania grafu
+      title=Grafy trigionometrických funkcií,   % nadpis grafu 
+        axis lines = left,                      % poloha osi
+        xlabel = $x$,                           % popis osi
+        ylabel = $f(x)$,
+            ymajorgrids=true,                   % zobrazenie mriezky pre osi
+            xmajorgrids=true,
+        grid style=dashed,                      % typ mriezky
+        
+        legend style={                          % formatovanie legendy
+            cells={anchor=west},                % umiestnenie textu v legende
+            legend pos=south east,              % umiestnenie legendy v grafe
+        },
+    ]
+
+    \addplot [                                  % zobrazenie funkcie na grafe
+        domain=-10:10,                          % rozsah hodnot premennej funkcie
+        samples=100,                            % pocet vzoriek
+        color=blue,                             % farba
+      ]
+      { sin(deg(x)) };                          % definicia funkcie 
+      \addlegendentry{ $sin(x)$ }               % pridanie do legendy s textom
+
+    \addplot [
+        domain=-10:10, 
+        samples=100, 
+        color=red,
+      ]
+      {cos(deg(x))};
+      \addlegendentry{ $cos(x)$ }
+
+    \addplot [
+        domain=-10:10,  
+        samples=100, 
+        color=cyan,
+      ]
+      {pow(sin(deg(x)),2)};
+      \addlegendentry{ $sin(x)^2$  } 
+
+  \end{axis}                                    % koniec bloku
+\end{tikzpicture}                               % koniec prostredia
+```
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="matplotlib">
+<h2><font color='#547792'> <em>matplotlib</em> </font><a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h2>
+<p>Pre vkladanie grafov do prostredia <em>Sphinx</em> môžeme použiť populárnu knižnicu <a class="reference external" href="https://matplotlib.org/">matplotlib</a> pre jazyk Python. Výstup grafov môžeme realizovať pomocou exportu do rastrového obrázku alebo do makier <em>TikZ</em>.</p>
+<p><strong>Inštalácia</strong></p>
+<p>Pre export do makier <em>TikZ</em> musíme doinštalovať pomocnú knižnicu <em>matplot2tikz</em></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> pip install matplot2tikz
+</pre></div>
+</div>
+<figure class="align-default" id="sig-01">
+<a class="reference internal image-reference" href="_images/am_signal.png"><img alt="_images/am_signal.png" src="_images/am_signal.png" style="width: 500px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Obr. 19 </span><span class="caption-text">Graf vytvorený v knižnici <em>matplotlib</em>,</span><a class="headerlink" href="#sig-01" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><font color='#84B179'> Zdrojový kód obrázku </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;ggplot&quot;</span><span class="p">)</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>     <span class="c1"># 2*pi*t</span>
+
+<span class="n">m</span>  <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">A0</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">ct</span> <span class="o">=</span> <span class="n">A0</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>     <span class="c1"># modulacny signal</span>
+<span class="n">am</span> <span class="o">=</span> <span class="n">ct</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>        <span class="c1"># amplitudova modulacia</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">am</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">ct</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="o">-</span><span class="n">ct</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Modulačný činiteľ &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;AM&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><font color='#84B179'> Export grafu do formátu <em>png</em> </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Doplnením do zdrojového kódu grafu uložíme graf ako rastrový obrázok.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;am_signal.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Vygenerovaný obrázok zobrazíme pomocou direktívy {figure}. Na obrázok sa môžeme odkazovať referenciou.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{figure} am_signal.png
+:width: 600px
+:name: sig_01
+
+Graf vytvorený v knižnici *matplotlib*.
+```
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><font color='#84B179'> Export grafu do formátu do makier <em>TikZ</em> </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Doplnením do zdrojového kódu grafu uložíme graf do makier <em>TikZ</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplot2tikz</span>
+<span class="n">matplot2tikz</span><span class="o">.</span><span class="n">clean_figure</span><span class="p">()</span>
+<span class="n">matplot2tikz</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot; am_signal.tex&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Vygenerovaný obrázok zobrazíme pomocou direktívy {tikz}.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{tikz} Graf vytvorený v knižnici *matplotlib*
+  :include: ./py/test.tex
+  :xscale: 75
+```
+</pre></div>
+</div>
+</div>
+</details><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/concepts.html
+https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/matplotlib.html
+https://lpn-doc-sphinx-primer.readthedocs.io/en/latest/extensions/tikz/tikztiming.html
+</pre></div>
+</div>
+<p><a class="reference external" href="https://tikz.dev/">https://tikz.dev/</a></p>
+<p><strong>Galéria PGFPlots</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pgfplots.sourceforge.net/gallery.html">PGFPlots Gallery</a></p></li>
+<li><p><a class="reference external" href="https://www.overleaf.com/learn/latex/Pgfplots_package">https://www.overleaf.com/learn/latex/Pgfplots_package</a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0310_graphviz.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><font color='#4B9DA9'> Orientované grafy </font></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="0315_schemy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><font color='#4B9DA9'> Elektronické zapojenia </font></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pgfplots"><font color="#547792"> <em>pgfplots</em> </font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib"><font color="#547792"> <em>matplotlib</em> </font></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Fabo, Michal Kuba
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, LAB - 411.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

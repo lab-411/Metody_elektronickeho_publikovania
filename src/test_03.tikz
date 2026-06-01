@@ -1,0 +1,30 @@
+\usetikzlibrary{circuits}
+\usetikzlibrary{circuits.ee.IEC}
+\tikzset{circuit declare symbol = ac source}
+\tikzset{set ac source graphic = ac source IEC graphic}
+\tikzset{
+         ac source IEC graphic/.style=
+          {
+           transform shape,
+           circuit symbol lines,
+           circuit symbol size = width 3 height 3,
+           shape=generic circle IEC,
+           /pgf/generic circle IEC/before background=
+            {
+             \pgfpathmoveto{\pgfpoint{-0.8pt}{0pt}}
+             \pgfpathsine{\pgfpoint{0.4pt}{0.4pt}}
+             \pgfpathcosine{\pgfpoint{0.4pt}{-0.4pt}}
+             \pgfpathsine{\pgfpoint{0.4pt}{-0.4pt}}
+             \pgfpathcosine{\pgfpoint{0.4pt}{0.4pt}}
+             \pgfusepathqstroke
+            }
+          }
+        }
+
+\begin{tikzpicture}[circuit ee IEC]
+  \draw (0,0) to [capacitor={info={$q$\ \ $-q$}}]     ++(1, 0)
+              to [resistor={info ={$R$}}]             ++(2, 0) 
+              to [current direction' = {info = {$I$}}]++(0,-2) 
+              to [inductor={info=$L$}]                  (0,-2)  
+              to [ac source={info={$V$}}]               (0,0);
+\end{tikzpicture}
