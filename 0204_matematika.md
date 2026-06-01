@@ -189,14 +189,14 @@ Argumentom prostredia **\fbox{...}** je textový reťazec, pre matematické vťa
 
       \begin{equation*}
           \fbox{
-              \color{red} $q = \sqrt{\sin(\alpha^2) + \cos(\beta^2)}$
+               $\color{red} q = \sqrt{\sin(\alpha^2) + \cos(\beta^2)}$
           }
       \end{equation*}
 
 
 \begin{equation*}
 \fbox{
-      \color{red}  $q = \sqrt{\sin(\alpha^2) + \cos(\beta^2)}$
+      $\color{red} q = \sqrt{\sin(\alpha^2) + \cos(\beta^2)}$
       }
 \end{equation*}
 
