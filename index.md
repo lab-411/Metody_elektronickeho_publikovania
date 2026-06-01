@@ -23,9 +23,6 @@
 0010_sphinx.md
 ```
 
-https://macgyver.siliconhill.cz/wiki/projekty/virtualnibastlirna
-
-
 ```{toctree}
 :titlesonly: True
 :caption: Typografia

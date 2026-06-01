@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Konfigurácia &#8212; Metódy elektronického publikovania 1 documentation</title>
+    <title>Metody_elektronickeho_publikovania &#8212; Metódy elektronického publikovania 1 documentation</title>
   
   
   
@@ -56,11 +56,9 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '0014_sphinx_predloha';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Formátovanie textu" href="0202_formatovanie.html" />
-    <link rel="prev" title="Inštalácia" href="0012_sphinx_install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -112,6 +110,8 @@
       
       
       
+        
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -157,11 +157,11 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Úvod</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0005_publikovanie.html"><font color="#4B9DA9"> Elektronické publikácie </font></a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="0010_sphinx.html"><font color="#4B9DA9"> Publikačná platforma </font></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="0010_sphinx.html"><font color="#4B9DA9"> Publikačná platforma </font></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="0012_sphinx_install.html"><font color="#4B9DA9"> Inštalácia </font></a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><font color="#4B9DA9"> Konfigurácia </font></a></li>
+<li class="toctree-l2"><a class="reference internal" href="0014_sphinx_predloha.html"><font color="#4B9DA9"> Konfigurácia </font></a></li>
 </ul>
 </details></li>
 </ul>
@@ -254,7 +254,7 @@
       
       
       
-      <li><a href="_sources/0014_sphinx_predloha.md" target="_blank"
+      <li><a href="_sources/README.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -317,9 +317,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -330,21 +328,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><font color='#4B9DA9'> Konfigurácia </font></h1>
+    <h1>Metody_elektronickeho_publikovania</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vytvorenie-predlohy"><font color="#547792"> Vytvorenie predlohy </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uprava-prostredia-pre-markdown"><font color="#547792"> Úprava prostredia pre <em>Markdown</em> </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vytvorenie-publikacie"><font color="#547792"> Vytvorenie publikácie </font></a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -354,126 +342,10 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="konfiguracia">
-<h1><font color='#4B9DA9'> Konfigurácia </font><a class="headerlink" href="#konfiguracia" title="Link to this heading">#</a></h1>
-<p>V prostredí <em>Sphinx</em> môžeme vygenerovať predlohu, ktorá obsahuje základné prvky budúcej publikácie. Samotnú publikáciu potom vytvárame postupných rozširovaním a modifikovaním vytvorenej predlohy. Vytvorenie predlohy novej publikácie bude pozostávať z nasledujúcich krokov:</p>
-<ul class="simple">
-<li><p>vygenerovanie predlohy publikácie pre prostredie <em>Sphinx</em></p></li>
-<li><p>konfigurácia prostredia a doplnenie rozšírení</p></li>
-</ul>
-<p>Ak budeme publikáciu vytvárať pomocou textov formátovaných v <em>Markdown</em>:</p>
-<ul class="simple">
-<li><p>upravíme vygenerovanú predlohu</p></li>
-<li><p>podľa potreby aktivujeme doplnkové rozšírenia pre <em>Markdown</em></p></li>
-</ul>
-<section id="vytvorenie-predlohy">
-<h2><font color='#547792'> Vytvorenie predlohy </font><a class="headerlink" href="#vytvorenie-predlohy" title="Link to this heading">#</a></h2>
-<p>Pre novú publikáciu vytvoríme zdrojový adresár, v ktorom budú uložené všetky dokumenty, konfigurácie a skripty. Počiatočnú štruktúru publikácie ako aj konfiguračný súbor s predvolenými konfiguračnými hodnotami vytvoríme spustením skriptu v zdrojovom adresári publikácie:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
-</pre></div>
-</div>
-<p>Skript vytvorí základnú štruktúru publikácie prednastavenej pre tvorbu vo formáte <em>reStructuredText</em>. V zdrojovom adresári sa nachádzajú súbory</p>
-<ul class="simple">
-<li><p><em><a class="reference external" href="http://conf.py">conf.py</a></em> - konfiguračný súbor pre nastavenie vzhľadu, doplnkov a rozšírení</p></li>
-<li><p><em>Makefile</em> - skript pre konvertor textov</p></li>
-<li><p><em>index.rst</em> - hlavný súbor v hierarchii vytváraného dokumentu</p></li>
-<li><p><em>make.bat</em> - povelový súbor pre konvertovanie dokumentu vo Windows</p></li>
-</ul>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text"><font color='#84B179'> Test predlohy </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Vygenerovanú predlohu publikácie otestujeme skonvertovaním na <em>html</em> dokument príkazom <a class="reference external" href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html">sphinx-build</a> spustenín v zdrojovom adresári</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  sphinx-build -M html ./ ./build --fail-on-warning
-</pre></div>
-</div>
-<p class="sd-card-text">Vygenerovaný dokument <em>index.html</em> je v adresári <em>./build/html/</em></p>
-</div>
-</details></section>
-<section id="uprava-prostredia-pre-markdown">
-<h2><font color='#547792'> Úprava prostredia pre <em>Markdown</em> </font><a class="headerlink" href="#uprava-prostredia-pre-markdown" title="Link to this heading">#</a></h2>
-<p>Vytváranie dokumentov vo formáte <em>Markdown</em> umožňuje preprocesor <em>myst-parser</em>, ktorý konvertuje príkazy z <em>Markdown</em> do formátu <em>reStructuredText</em>. Pre použitie formátu <em>Markdown</em> upravíme vygenerovanú konfiguráciu dokumentácie nasledujúcimi krokmi</p>
-<ul>
-<li><p>zmažeme súbor <em>index.rst</em></p></li>
-<li><p>vytvoríme nový súbor <em><a class="reference external" href="http://index.md">index.md</a></em>, tento súbor bude po konverzii titulným súborom publikácie. Do súboru uložíme text, napríklad:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Publikácia
-
-Text publikácie.
-</pre></div>
-</div>
-</li>
-<li><p>do súboru <em><a class="reference external" href="http://config.py">config.py</a></em> doplníme do zoznamu <em>extensions</em> rozšírenia z inštalácie pre <em>Sphinx</em></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>extensions = [
-      &quot;myst_nb&quot;,
-      &quot;sphinx_design&quot;,
-      &quot;sphinx_copybutton&quot;,
-      &quot;sphinx_togglebutton&quot;,
-      &quot;sphinx_subfigure&quot;, 
-      &quot;sphinxcontrib.tikz&quot;
-       ]
-</pre></div>
-</div>
-</li>
-<li><p>vyberieme grafickú tému budúcej publikácie a nakonfigurujeme ju pomocou <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output">konfiguračných premenných</a> v súbore <em><a class="reference external" href="http://conf.py">conf.py</a></em>. Ďalšie témy grafického rozhrania sú dostupné na <a class="reference external" href="https://sphinx-themes.org/">internete</a>. Niektoré témy umožňujú použitie loga na vygenerovanej stránke, základné nastavenie je pomocou premnených</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># --- Vyber z inštalovanych tem, odkomentujte vybranu temu
-# html_theme = &quot;alabaster&quot;
-# html_theme = &quot;sphinx_rtd_theme&quot;
-# html_theme = &quot;pydata-sphinx-theme&quot;
-# html_theme = &quot;furo&quot;
-html_theme = &#39;sphinx_book_theme&#39;
-
-html_logo = &quot;my_logo.png&quot;
-html_static_path = [&#39;_static&#39;]
-</pre></div>
-</div>
-</li>
-<li><p>Podľa potreby doplníme do súboru <em><a class="reference external" href="http://conf.py">conf.py</a></em> rozšírenia pre formátovanie textov v modifikácii <em>Markdownu</em> <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html">MyST</a>, dostupné sú zabudované rozšírenia:</p>
-<ul class="simple">
-<li><p><em>smartquotes</em> - zjednodušené zadávanie typografických značiek</p></li>
-<li><p><em>strikethrough</em> - prečiarknutý text</p></li>
-<li><p><em>dollarmath</em> - zjednodušené zadávanie matematických textov pomocou $…$ alebo $$…$$</p></li>
-<li><p><em>amsmath</em> - doplnenie prostredia <em>asmmath</em> pre LaTex</p></li>
-<li><p><em>colon_fence</em> - alternatívne použitie :::</p></li>
-<li><p><em>substitution</em> - možnosť definovania substitučných reťazcov pri opakovanom zadávaní rovnakého textu</p></li>
-</ul>
-</li>
-<li><p>Všetky zabudované rozšírenia sa aktivujú v súbore <em><a class="reference external" href="http://conf.py">conf.py</a></em> zoznamom:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>myst_enable_extensions = [
-    &quot;amsmath&quot;,
-    &quot;attrs_inline&quot;,
-    &quot;colon_fence&quot;,
-    &quot;deflist&quot;,
-    &quot;dollarmath&quot;,
-    &quot;fieldlist&quot;,
-    &quot;html_admonition&quot;,
-    &quot;html_image&quot;,
-    &quot;linkify&quot;,
-    &quot;replacements&quot;,
-    &quot;smartquotes&quot;,
-    &quot;strikethrough&quot;,
-    &quot;substitution&quot;,
-    &quot;tasklist&quot;,
-]
-</pre></div>
-</div>
-</li>
-</ul>
-<p>Konfigurácia pre túto publikáciu je v adresármi so zdrojovými kódmmi v súbore <a class="reference download internal" download="" href="_downloads/fb0d0d7ff27f33697ba3b787ec894677/conf.py"><span class="xref download myst">conf.py</span></a>.</p>
-</section>
-<section id="vytvorenie-publikacie">
-<h2><font color='#547792'> Vytvorenie publikácie </font><a class="headerlink" href="#vytvorenie-publikacie" title="Link to this heading">#</a></h2>
-<p>Z vytvorenej konfigurácie vygenerujeme publikáciu z príkazom konzoly v pracovnom adresári</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  make html
-</pre></div>
-</div>
-<p>Po úspešnej kompilácii sa v adresári <em>_build</em> bude nachádzať podadresár <em>html</em> so súborom <em>index.html</em> ktorý otvorime v štandardnom www prehliadači.</p>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="_images/sphinx_test.png"><img alt="_images/sphinx_test.png" src="_images/sphinx_test.png" style="width: 600px;" />
-</a>
-<figcaption>
-<p><span class="caption-number">Obr. 3 </span><span class="caption-text">Vytvorená predloha publikácie.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="metody-elektronickeho-publikovania">
+<h1>Metody_elektronickeho_publikovania<a class="headerlink" href="#metody-elektronickeho-publikovania" title="Link to this heading">#</a></h1>
+<p>A book on electronic publishing methods on the Sphinx platform</p>
+<p><a class="reference external" href="https://lab-411.github.io/Metody_elektronickeho_publikovania/_build/html/index.html">https://lab-411.github.io/Metody_elektronickeho_publikovania/_build/html/index.html</a></p>
 </section>
 
 
@@ -487,49 +359,12 @@ html_static_path = [&#39;_static&#39;]
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="0012_sphinx_install.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><font color='#4B9DA9'> Inštalácia </font></p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="0202_formatovanie.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><font color='#4B9DA9'> Formátovanie textu</font></p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vytvorenie-predlohy"><font color="#547792"> Vytvorenie predlohy </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uprava-prostredia-pre-markdown"><font color="#547792"> Úprava prostredia pre <em>Markdown</em> </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vytvorenie-publikacie"><font color="#547792"> Vytvorenie publikácie </font></a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
