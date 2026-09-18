@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Formátovanie textu &#8212; Metódy elektronického publikovania 1 documentation</title>
+    <title>Externé dokumenty &#8212; Metódy elektronického publikovania 1 documentation</title>
   
   
   
@@ -56,11 +56,11 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '0202_formatovanie';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '0214_extern';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Obsah" href="0210_obsah.html" />
-    <link rel="prev" title="Konfigurácia" href="0014_sphinx_predloha.html" />
+    <link rel="next" title="Rastrová grafika" href="0302_raster.html" />
+    <link rel="prev" title="Matematické výrazy" href="0204_matematika.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,13 +167,13 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Typografia</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><font color="#4B9DA9"> Formátovanie textu</font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="0202_formatovanie.html"><font color="#4B9DA9"> Formátovanie textu</font></a></li>
 <li class="toctree-l1"><a class="reference internal" href="0210_obsah.html"><font color="#4B9DA9"> Obsah </font></a></li>
 <li class="toctree-l1"><a class="reference internal" href="0212_referencie.html"><font color="#4B9DA9"> Odkazy a referencie </font></a></li>
 <li class="toctree-l1"><a class="reference internal" href="0206_tabulky.html"><font color="#4B9DA9"> Tabuľky </font></a></li>
 <li class="toctree-l1"><a class="reference internal" href="0208_zdrojove_kody.html"><font color="#4B9DA9"> Zdrojové kódy </font></a></li>
 <li class="toctree-l1"><a class="reference internal" href="0204_matematika.html"><font color="#4B9DA9"> Matematické výrazy </font></a></li>
-<li class="toctree-l1"><a class="reference internal" href="0214_extern.html"><font color="#4B9DA9"> Externé dokumenty </font></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><font color="#4B9DA9"> Externé dokumenty </font></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Grafika</span></p>
 <ul class="nav bd-sidenav">
@@ -255,7 +255,7 @@
       
       
       
-      <li><a href="_sources/0202_formatovanie.md" target="_blank"
+      <li><a href="_sources/0214_extern.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +331,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><font color='#4B9DA9'> Formátovanie textu</font></h1>
+    <h1><font color='#4B9DA9'> Externé dokumenty </font></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -341,11 +341,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komentare"><font color="#547792"> Komentáre </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neformatovany-text"><font color="#547792"> Neformátovaný text </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zahlavie-dokumentu"><font color="#547792"> Záhlavie dokumentu </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typ-textu"><font color="#547792"> Typ textu </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#farba-textu"><font color="#547792"> Farba textu </font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odkazy"><font color="#547792"> Odkazy </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#include"><font color="#E37434"> <em>{include}</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#literalinclude"><font color="#E37434"> <em>{literalinclude}</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embed"><font color="#E37434"> <em>{embed}</em> </font></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -357,142 +358,33 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="formatovanie-textu">
-<h1><font color='#4B9DA9'> Formátovanie textu</font><a class="headerlink" href="#formatovanie-textu" title="Link to this heading">#</a></h1>
-<p>Zdrojový text dokumentu vytvárame v ľubovolnom textovom editore pre editovanie natívneho testu (nie v textovom editore z kancelárskych balíkov). Je vhodné, aby editor rozpoznával a farebne zvyrazňoval syntax formátovania <em>Markdown</em>, napríklad <a class="reference external" href="https://www.geany.org/">Geany</a>, <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>, <a class="reference external" href="https://kate-editor.org/">Kate</a> a ďaľšie.</p>
-<section id="komentare">
-<h2><font color='#547792'> Komentáre </font><a class="headerlink" href="#komentare" title="Link to this heading">#</a></h2>
-<p>Znakom <code class="docutils literal notranslate"><span class="pre">%</span></code> označíme v zdrojový texte dokumentu riadky s komentárom, poznámkami alebo časti dokumentu ktoré budú vyradené z generovania výsledného dokumentu:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  % komentár v dokumente je pri konverzii textu ignorovaný 
-</pre></div>
-</div>
-</section>
-<section id="neformatovany-text">
-<h2><font color='#547792'> Neformátovaný text </font><a class="headerlink" href="#neformatovany-text" title="Link to this heading">#</a></h2>
-<p>Text odsadený o 4 a viac znakov od okraja strany je pokladaný za neformátovaný blok a je zobrazený v samostatnej bunke. Využíva sa najmä pri vkladaní zdrojových kódov programov a skriptov, ukážkach formátovania textu a všade tam, kde nie je vhodná interpretácia formátovania textu.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Toto je neformátovaný text.
-# Riadiace **sekvencie** pre formátovanie textu sú ignorované.
-</pre></div>
-</div>
-</section>
-<section id="zahlavie-dokumentu">
-<h2><font color='#547792'> Záhlavie dokumentu </font><a class="headerlink" href="#zahlavie-dokumentu" title="Link to this heading">#</a></h2>
-<p>Každá samostatná kapitola dokumentu musí začínať záhlavím začínajúcim jedným znakom mriežky <code class="docutils literal notranslate"><span class="pre">#</span></code>, označenia podkapitol začínajú opakovaním tohoto znaku až do 6-tej úrovne. Záhlavia v hlavnom texte se prenášajú do obsahu dokumentu.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Názov kapitoly
-   ...
-   ## Podkapitola 1.
-   ...
-      ### Odsek 1.
-      ...
-      ### Odsek 2.
-      ...
-   ## Podkapitola 2.
-   ...
-</pre></div>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Poznámka</p>
-<p>Konvertor <em>Sphinx</em> kontroluje hierachické usporiadanie textu, pri vynechaní názvu kapitoly alebo niektorej úrovne podkapitol vypíše pri konverzii upozornenie.</p>
-</div>
-</section>
-<section id="typ-textu">
-<h2><font color='#547792'> Typ textu </font><a class="headerlink" href="#typ-textu" title="Link to this heading">#</a></h2>
-<p>Základné formátovanie textu ako <em>šikmý text</em>, <strong>tučný text</strong>, <em><strong>šikmý tučný text</strong></em> a <code class="docutils literal notranslate"><span class="pre">zvýraznený</span> <span class="pre">text</span></code> získame použitím hviezdičkovej konvencie a apostrofov:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*šikmý text*
-**tučný text**
-***šikmý tučný text***
-`zvýraznený text`
-</pre></div>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Poznámka</p>
-<p>Text musí byť medzi hviedičkamu uzatvorený bez medzier na začiatku a konci, v opačnom prípade je formátovanie ignorované.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    **chyba **
-</pre></div>
-</div>
-</div>
-</section>
-<section id="farba-textu">
-<h2><font color='#547792'> Farba textu </font><a class="headerlink" href="#farba-textu" title="Link to this heading">#</a></h2>
-<p>Farebnú reprezentáciu textu môžeme definovať pomocou <a class="reference external" href="https://www.w3schools.com/html/default.asp">HTML značiek</a>. Pre zmenu farby textu môžeme použiť značku <code class="docutils literal notranslate"><span class="pre">&lt;font&gt;...&lt;/font&gt;</span></code></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;font color=&#39;COLOR_NAME&#39;&gt; text &lt;/font&gt;
-&lt;font color=&#39;#RRGGBB&#39;&gt; text &lt;/font&gt;
-</pre></div>
-</div>
-<p>kde <code class="docutils literal notranslate"><span class="pre">COLOR_NAME</span></code> je meno pomenovanej farby. Zoznam mien štandardných farieb je uvedený nižšie, kompletný zoznam mien farieb rozpoznávaných www prehliadačmi je uvedený v <a class="reference external" href="https://www.w3schools.com/colors/colors_names.asp">HTML dokumentácii</a>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text"><font color='#84B179'> Mená základnej sady farieb </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+  <section class="tex2jax_ignore mathjax_ignore" id="externe-dokumenty">
+<h1><font color='#4B9DA9'> Externé dokumenty </font><a class="headerlink" href="#externe-dokumenty" title="Link to this heading">#</a></h1>
+<p>Parser externých dokumentov</p>
 <ul class="simple">
-<li><p class="sd-card-text"><font color='black'> white </font></p></li>
-<li><p class="sd-card-text"><font color='silver'> silver </font></p></li>
-<li><p class="sd-card-text"><font color='gray'> gray </font></p></li>
-<li><p class="sd-card-text"><font color='black'> black </font></p></li>
-<li><p class="sd-card-text"><font color='red'> red </font></p></li>
-<li><p class="sd-card-text"><font color='maroon'> maroon </font></p></li>
-<li><p class="sd-card-text"><font color='yellow'> yellow </font></p></li>
-<li><p class="sd-card-text"><font color='olive'> olive </font></p></li>
-<li><p class="sd-card-text"><font color='lime'> lime </font></p></li>
-<li><p class="sd-card-text"><font color='green'> green </font></p></li>
-<li><p class="sd-card-text"><font color='aqua'> aqua </font></p></li>
-<li><p class="sd-card-text"><font color='teal'> teal </font></p></li>
-<li><p class="sd-card-text"><font color='blue'> blue </font></p></li>
-<li><p class="sd-card-text"><font color='navy'> navy </font></p></li>
-<li><p class="sd-card-text"><font color='fuchsia'> fuchsia </font></p></li>
-<li><p class="sd-card-text"><font color='purple'> purple </font></p></li>
+<li><p>.tex</p></li>
+<li><p>.ipnb</p></li>
+<li><p>.html</p></li>
 </ul>
-</div>
-</details><p>Farbu textu môžeme zadať aj pomocou hexadecimálneho číselného kódu vo formáte <code class="docutils literal notranslate"><span class="pre">#RRGGBB</span></code> s hodnotami farebných zložiek červenej, zelenej a modrej farby. Prevod zvolenej farby na jej kód je súčasťou každého grafického editora, interaktívne si môžeme vygenerovať kódy pre zvolené farby na špecializovaných stránkach <a class="reference external" href="https://htmlcolorcodes.com/">internetu</a>.</p>
-<p>Širšie možnosti formátovania farebného zobrazenie texty umožňuje atribút <code class="docutils literal notranslate"><span class="pre">style</span></code> v spojení so značkou <a class="reference external" href="https://www.w3schools.com/TAGs/att_global_style.asp">HTML elementu</a> <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span></code>  … :</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;span style=&#39;style_definitions&#39;&gt; text &lt;/span&gt;     - inline text
-&lt;p    style=&#39;style_definitions&#39;&gt; text &lt;/p&gt;        - paragraf
-&lt;h1   style=&#39;style_definitions&#39;&gt; text &lt;/h1&gt;       - zahlavie dokumentu
-
-style_definitions:
-    color: COLOR_NAME;              - farba textu
-    color: #RRGGBB;
-    
-    background-color: COLOR_NAME;   - farba pozadia textu 
-    background-color: #RRGGBB;
-    
-    border: width type color;       - rámik textu
-        width                       - šírka rámiku v px 
-        type                        - typ ramika, dotted solid double dashed
-
-   border-radius: value;            - polomer rohov rámika v px
+<section id="odkazy">
+<h2><font color='#547792'> Odkazy </font><a class="headerlink" href="#odkazy" title="Link to this heading">#</a></h2>
+<section id="include">
+<h3><font color='#E37434'> <em>{include}</em> </font><a class="headerlink" href="#include" title="Link to this heading">#</a></h3>
+</section>
+<section id="literalinclude">
+<h3><font color='#E37434'> <em>{literalinclude}</em> </font><a class="headerlink" href="#literalinclude" title="Link to this heading">#</a></h3>
+<p>Vloží externý súbor tak, ako keby bol súčasťou dokumentu.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{include.literal}
 </pre></div>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text"><font color='#84B179'> Príklad 1. Farebné zvýraznenie textu. </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Farebný inline &lt;span style=&#39;color:fuchsia&#39;&gt; text &lt;/span&gt;. 
-  
-  Zvýraznený &lt;span style=&#39;color: #FF0000;border: 
-                    1px solid green; 
-                    background-color: aqua; 
-                    border-radius: 5px;&#39;&gt;text&lt;/span&gt; v rámiku.
+</section>
+<section id="embed">
+<h3><font color='#E37434'> <em>{embed}</em> </font><a class="headerlink" href="#embed" title="Link to this heading">#</a></h3>
+<p>Indexuje vložený dokument. Skráteny formát</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>![](xref:spec#admonition)
 </pre></div>
 </div>
-<p class="sd-card-text">Farebný <span style='color:fuchsia'> text </span>.</p>
-<p class="sd-card-text">Zvýraznený <span style='color: #FF0000;border: 
-                        1px solid green; 
-                        background-color: aqua; 
-                        border-radius: 5px;'>text</span> v rámiku.</p>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text"><font color='#84B179'> Príklad 2. Farebné zvýraznenie paragrafu. </font></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;p style=&#39;color:red&#39;&gt; 
-    Farebne výraznený paragraf. 
-&lt;/p&gt;. 
-</pre></div>
-</div>
-<p style='color:red'> Farebne výraznený paragraf. </p>. 
-</div>
-</details><div class="tip admonition">
-<p class="admonition-title">Poznámka</p>
-<p>HTML značka <code class="docutils literal notranslate"><span class="pre">&lt;font&gt;</span></code> je vo verzii <em>HTML 5</em> pokladaná za zastaralú a jej používanie sa v nových dokumentoch neodporúča.</p>
-</div>
+</section>
 </section>
 </section>
 
@@ -508,20 +400,20 @@ style_definitions:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="0014_sphinx_predloha.html"
+       href="0204_matematika.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><font color='#4B9DA9'> Konfigurácia </font></p>
+        <p class="prev-next-title"><font color='#4B9DA9'> Matematické výrazy </font></p>
       </div>
     </a>
     <a class="right-next"
-       href="0210_obsah.html"
+       href="0302_raster.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><font color='#4B9DA9'> Obsah </font></p>
+        <p class="prev-next-title"><font color='#4B9DA9'> Rastrová grafika </font></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -543,11 +435,12 @@ style_definitions:
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komentare"><font color="#547792"> Komentáre </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neformatovany-text"><font color="#547792"> Neformátovaný text </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zahlavie-dokumentu"><font color="#547792"> Záhlavie dokumentu </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typ-textu"><font color="#547792"> Typ textu </font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#farba-textu"><font color="#547792"> Farba textu </font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odkazy"><font color="#547792"> Odkazy </font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#include"><font color="#E37434"> <em>{include}</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#literalinclude"><font color="#E37434"> <em>{literalinclude}</em> </font></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embed"><font color="#E37434"> <em>{embed}</em> </font></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

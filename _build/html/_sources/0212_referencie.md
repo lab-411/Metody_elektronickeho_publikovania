@@ -34,7 +34,7 @@ Pre vkladanie odkazov je potrebné v *conf.py* aktivovať rozšírenie pre *Mark
 ### <font color='#E37434'> Odkaz na názov kapitoly </font>
 
     (heading-target)=
-    ### Názov kapitorly
+    ### Názov kapitoly
 
 ### <font color='#E37434'> Odkaz na paragraf </font>    
 
