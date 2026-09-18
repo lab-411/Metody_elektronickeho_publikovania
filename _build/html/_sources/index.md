@@ -13,7 +13,7 @@
 
 <center> 
 <h3> <font color='brown'>  <b> LAB - 411 Production </b> </font>     </h3>
-<h3> <font color='brown'>  <b> Verzia 0.15 / Máj 2026 </b> </font>  </h3>
+<h3> <font color='brown'>  <b> Verzia 0.16 / September 2026 </b> </font>  </h3>
 </center>
 
 ```{toctree}
