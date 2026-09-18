@@ -70,7 +70,14 @@ Dokumentácia k rozšíreniu **{admonition}** je dostupná [online](https://myst
       
 ##  <font color='#547792'> Rozbalovacie upozornenia </font>
 
-S pomocou rozšírenia *sphinx-togglebutton* a parametrom **class** s hodnotou *dropdown* získame jednoduché alebo pomenované rozbalovacie upozornenie.
+Rozbalovacie upozornenia sú vhodným prostriedkom pre zobrazenie doplnkových informácií k hlavnému textu. Do textu dokumentu ich môžeme vložiť niekoľkými spôsobmi, priamo direktívou *{dropdown}*, direktívami pre jednotlivé typy upozornení s hodnotou *dropdown* pre parameter :class: alebo pomocou rozšírenia *sphinx-togglebutton* a parametrom **class** s hodnotou *dropdown*.
+
+
+      ```{dropdown} string        - použitie direktívy {dropdown}
+      
+          text                    - formátovaný text
+      ```
+
 
       ```{typ_upozornenia}        - jednoduché upozornenie
       :class: dropdown            - referencia na upozornenie 

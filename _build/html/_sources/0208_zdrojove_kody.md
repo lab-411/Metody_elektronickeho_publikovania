@@ -31,15 +31,14 @@ V texte publikácie môžeme použiť zdrojové kódy programov
  
 Direktíva **{code-block}** je určená pre pasívne zobrazenie kódu programu.
 
-    ```{code-cell} programovaci_jazyk
+    ```{code-block} programovaci_jazyk
     :label: string                - referencia na výpis programu (listing)
     :caption: string              - názov listingu
     :linenos: boolean             - zobrazeni čísel riadkov
     :lineno-start: number         - poradové číslo začiatku číslovania riadkov
     :emphasize-lines: list        - zoznam čísel riadkov, ktoré budú zvýraznené
-    :filename: string
     
-    zdrojový kód programu
+    ... zdrojový kód programu...
     ```
 
 ````{dropdown}  <font color='#84B179'> Použitie direktívy {code-block} </font>
@@ -56,7 +55,6 @@ Direktíva *{code-block}* v texte dokumentu:
 
     for i in range(10):
       print(i, pow(i,2), sqrt(i) )
-        
     ```
 Výsledok direktívy v renderovanom dokumente.
 
@@ -72,6 +70,18 @@ for i in range(10):
   print(i, pow(i,2), sqrt(i) )
 ```
 ````
+
+### <font color='#E37434'> *{literalinclude}* </font>
+
+V prípade, že sa kód programu nachádza v samostatnom súbore, môžeme ho vložiť do textu pomocou direktívy *{literalinclude}*
+
+    ```{literalinclude} filename
+    :caption: string              - názov listingu
+    :start-at: string             - začiatok zobrazenia od výskytu textu
+    :end-before: string           - koniec zobrazenia po text
+    :lineno-match:                - zobrazenie čísel riadkov 
+    ```
+
 
  ### <font color='#E37434'> *{code-cell}* </font>
  

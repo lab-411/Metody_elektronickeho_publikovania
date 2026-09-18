@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
@@ -401,8 +401,14 @@
 </section>
 <section id="rozbalovacie-upozornenia">
 <h2><font color='#547792'> Rozbalovacie upozornenia </font><a class="headerlink" href="#rozbalovacie-upozornenia" title="Link to this heading">#</a></h2>
-<p>S pomocou rozšírenia <em>sphinx-togglebutton</em> a parametrom <strong>class</strong> s hodnotou <em>dropdown</em> získame jednoduché alebo pomenované rozbalovacie upozornenie.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  ```{typ_upozornenia}        - jednoduché upozornenie
+<p>Rozbalovacie upozornenia sú vhodným prostriedkom pre zobrazenie doplnkových informácií k hlavnému textu. Do textu dokumentu ich môžeme vložiť niekoľkými spôsobmi, priamo direktívou <em>{dropdown}</em>, direktívami pre jednotlivé typy upozornení s hodnotou <em>dropdown</em> pre parameter :class: alebo pomocou rozšírenia <em>sphinx-togglebutton</em> a parametrom <strong>class</strong> s hodnotou <em>dropdown</em>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  ```{dropdown} string        - použitie direktívy {dropdown}
+  
+      text                    - formátovaný text
+  ```
+
+
+  ```{typ_upozornenia}        - jednoduché upozornenie
   :class: dropdown            - referencia na upozornenie 
   
      text                     - formátovaný text 
