@@ -92,7 +92,7 @@ Direktíva *{code-cell}* vloží do textu vykonateľný kód programu a zobrazí
     
     zdrojový kód programu
     ```
-Parameter *tag* určuje formu zobrazenia, tagy označené ako *hide-...* skryjú kód, jeho výstup alebo kód s výstupom do rolovacieho okna, parametre označené ako *remove-...* odstránia príslušnú časť alebo aj celý kód zo zdrojového textu po jeho vykonaní. 
+Parameter *tag* určuje formu zobrazenia, [tagy]{#ref_tag} označené ako *hide-...* skryjú kód, jeho výstup alebo kód s výstupom do rolovacieho okna, parametre označené ako *remove-...* odstránia príslušnú časť alebo aj celý kód zo zdrojového textu po jeho vykonaní. 
     
 * hide-input
 * hide-output

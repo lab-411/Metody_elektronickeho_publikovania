@@ -17,6 +17,7 @@ kernelspec:
 % ### <font color='#E37434'> level 3 </font>
 % {dropdown} <font color='#84B179'> Text </font>
 
+(ref_tabulky)=
 #   <font color='#4B9DA9'> Tabuľky </font>
 
 Prehľadná reprezentácia dát pomocou tabuliek je dôležitou súčasťou odborných textov. Pretože sa dáta pre zobrazenie v tabuľkách môžu vyskytovať v rôznych formátoch, plaftorma *Sphinx* umožňuje ich vytváranie niekoľkými [spôsobmi](https://mystmd.org/guide/tables).
@@ -124,8 +125,10 @@ Direktíva **(csv-table)** je určená pre vytvorenie tabuľky z dát v [CSV for
 ```
 ````
 
+
 ### <font color='#E37434'> *{list-table}* </font>
 
+{#ref_list_table}
 Direktíva **(list-table)** je určená pre vytvorenie tabuľky z jednoduchého zoznamu.
 
     ```{list-table} meno 

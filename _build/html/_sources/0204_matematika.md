@@ -28,6 +28,7 @@ Platforma *Sphinx* využíva pre vkladanie matematickych výrazov do textu typog
 \nabla \times \mathbf{B} &= \mu_0 \left(\mathbf{J} + \varepsilon_0  \frac{\partial \mathbf{E}}{\partial t} \right)
 \end{align}
 
+(math_insert)=
 ##  <font color='#547792'> Vkladanie výrazov </font>
 
 Matematické výrazy je možné do textu dokumentu vložiť niekoľkými spôsobmi, použitím direktívy **{math}**, zjednodušeným postupom pomocou znakov `\$` ako aj primym vložením matematických výrazov formátovaných v typografickom systéme LaTeX.

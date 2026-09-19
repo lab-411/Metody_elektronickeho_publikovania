@@ -19,9 +19,9 @@ kernelspec:
 
 #   <font color='#4B9DA9'> Odkazy a referencie </font>
 
-##  <font color='#547792'> Odkazy </font>
+V texte dokumentu sa môžeme odkazovať pomocou referencií na lokálne dokumenty na dokumenty a stránky z internetu, ako aj na miesta v publikácii, ako sú kapitoly, odstavce (paragrafy) alebo časti textu. Referencie môžu byť sučasťou rozširujúcich direktív dokumentu, ako sú obrázky, poznámky, matematické vzťahy a podobne.  
 
-Pre vkladanie odkazov je potrebné v *conf.py* aktivovať rozšírenie pre *Markdown*
+Pre vkladanie odkazov je potrebné v *conf.py* aktivovať rozšírenia pre *Markdown*
 
     myst_enable_extensions = [
         ...
@@ -29,51 +29,135 @@ Pre vkladanie odkazov je potrebné v *conf.py* aktivovať rozšírenie pre *Mark
         "attrs_block",
         ...
         ]
-        
 
-### <font color='#E37434'> Odkaz na názov kapitoly </font>
+```{admonition} Upozornenie 
+:class: attention
+:name: rekompilacia 
 
-    (heading-target)=
-    ### Názov kapitoly
-
-### <font color='#E37434'> Odkaz na paragraf </font>    
-
-    {#paragraph-target}
-    This is a paragraph, with an attribute.
+Pri vytvorení a použití odkazov medzi rôznymi súbormi publikácie je potrebné aktualizovať internú tabuľku krížových referencií skompilovaním celého projektu publikácie. 
+```
     
-### <font color='#E37434'> Odkaz na text </font>      
+##  <font color='#547792'> Odkaz na kapitolu </font>
+
+Referenciu na kapitolu vytvoríme jej menom v zátvorkách nasledovaných znakom **=** bez medzier.
+
+    (heading-target)=                   - meno odkazu na kapitolu
+    # Názov kapitoly
+    
+```{admonition} Príklad použitia
+:class: tip, dropdown
+
+V cieľovom texte dokumentu, na ktorý budeme odkazovať, umiestnime referenciu k príslušnému názvu kapitoly alebo podkapitoly
+
+    (ref_tabulky)=
+    # Tabuľky
+
+V zdrojovom texte, z ktorého sa odkazujeme na kapitolu, referenciu použijeme
+
+    Toto je odkaz na [kapitolu](ref_tabulky), ktorá popisuje vytváranie tabuliek. 
+
+Toto je odkaz na [kapitolu](ref_tabulky), ktorá popisuje vytváranie tabuliek. 
+    
+```
+
+##  <font color='#547792'> Odkaz na paragraf </font>    
+
+    {#paragraph-target}              - meno referencie na paragraf (so znakom #) 
+    Text odstavca v dokumente.
+
+```{admonition} Príklad použitia
+:class: tip, dropdown
+
+V cieľovom texte dokumentu, na ktorý budeme odkazovať, umiestnime referenciu k paragrafu 
+
+    {#ref_list_table}
+    Direktíva **(list-table)** je určená pre
+
+V zdrojovom texte, z ktorého sa odkazujeme na paragraf, referenciu použijeme 
+
+    Toto je odkaz na [paragraf](ref_list_table)
+
+Toto je odkaz na [paragraf](ref_list_table) popisujúci použitie direktívy *{list-table}*.
+```    
+
+    
+##  <font color='#547792'> Odkaz na text </font>      
+
+V publikácii sa môžeme odkazovať aj na konkrétne miesta v cieľovom texte označením miesta v texte a priradením referencie. Označené miesto v texte nie je v zdrojovom v dokumente zvýraznené.
 
     This is a [span with an attribute]{#span-target}.
 
+```{admonition} Príklad použitia
+:class: tip, dropdown
+
+Do cieľového textu dokumentu umiestnime referenciu  
+
+    Parameter *tag* určuje formu zobrazenia, [tagy]{#ref_tag} označené ako ...
     
-### <font color='#E37434'> Odkaz na direktívu </font>  
+Na referenciu sa odkážene v zdrojovom texte 
 
-Odkaz na direktívu pre vloženie poznámky s parametrom *:name:*
+    Pomocou [parametrov](ref_tag) môžeme upraviť formu zobrazenia ...
+    
+Pomocou [parametrov](ref_tag) môžeme upraviť formu zobrazenia ...
+```
+    
+##  <font color='#547792'> Odkaz na direktívu </font>  
 
-    :::{note}
-    :name: directive-target
+Väčšina direktív pre úpravu a rozširovanie textu *{image}, {figure}, {table}* ... má parameter *:name:*, ktorým definujeme referenciu na direktívu. Direktívy pre vkladanie tabuliek, matematických vzťahov *{math}* a zdrojového textu *{code-block}* majú pre označenie referencie parameter *:label:* alebo špeciálny formát, ktorý je popísaný v ich [dokumentácii](math_insert).
 
-    Toto je poznámka s parametrom :name:
-    :::
+````{admonition} Príklady použitia
+:class: tip, dropdown
 
+    ```{note}                     - direktíva
+    :name: referencia             - definícia referencie
 
-Odkaz na obrázok zobrazený pomocou direktívy *{tikz}*, ktorá neobsahuje parameter *:name:*
-
-    ```{tikz} Konvertovaný [obrázok]{#image}
-    :include: ./img/cart0157.tikz
-    :xscale: 20
+    Text direktívy.
     ```
+Príklad použitia 
+    
+    Odkaz na upozornenie o potrebe [preloženia](rekompilacia) 
+    projektu po vytvorení a použití referencií. 
+    
+    Odkaz na [obrázok](img0302a) z kapitoly *Rastrová grafika*.
 
-### <font color='#E37434'> Použitie odkazov </font> 
+Odkaz na upozornenie o potrebe [preloženia](rekompilacia) projektu po vytvorení a použití referencií. 
 
-    * [reference1](#heading-target)
-    * [reference2](#paragraph-target)
-    * [obrazok](#image),
-    * [reference3](#span-target)
-    * [reference4](#directive-target)
+Odkaz na [obrázok](img0302a) z kapitoly *Rastrová grafika*.
+````
+    
+    
+##  <font color='#547792'> Odkaz na externý dokument </font>  
+    
+Odkazy na lokálne dokumenty alebo www stránky majú formát
+
+    [text](path)      - relatatívna cesta k internému dokumentu
+    [text](url)       - url csta k dokumentu na intranete/internete
+    
+    
+```{admonition} Príklad použitia
+:class: tip, dropdown
+
+    Manuál k prostrediu pre tvorbu matematických vzťahov [amsldoc](./doc/amsldoc.pdf).
+    
+    Online dokumentácia k [MyST](https://myst-parser.readthedocs.io/en/latest/intro.html). 
+
+Manuál k prostrediu pre tvorbu matematických vzťahov [amsldoc](./doc/amsldoc.pdf).
+
+Online dokumentácia k [MyST](https://myst-parser.readthedocs.io/en/latest/intro.html). 
+```
 
 
+##  <font color='#547792'> Numerické odkazy </font>  
 
+Ak sa potrebujeme v texte odkazovať na číslo obrázku, matematického vzťahu, listingu alebo tabulky, použijeme v texte formát odkazu v tvare
 
+    {numref}`referencia`
 
+```{admonition} Príklad použitia
+:class: tip, dropdown
 
+    Odkaz na obrázok číslo {numref}`img0302a` z kapitoly *Rastrová grafika*.
+
+Odkaz na obrázok číslo {numref}`img0302a` z kapitoly *Rastrová grafika*.
+
+```

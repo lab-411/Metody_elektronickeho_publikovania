@@ -67,7 +67,7 @@ Knižnica *circuits* je štandardným rozšírením knižnice makier *TikZ*. V k
 
 ````{dropdown}  <font color='#84B179'> Zdrojový kód </font>
 
-        ```{tikz} Zapojenie elektrick0ho obvodu pomocou knižnice *ciruits*.   
+        ```{tikz} Zapojenie elektrickeho obvodu pomocou knižnice *ciruits*.   
         :xscale: 30
 
         \usetikzlibrary{circuits}
@@ -113,7 +113,7 @@ Prostredie *CircuitMacros* je súbor makier pre programovací jazyk *dpic*, ktor
 * odkazy na prvky obvodu v rámci celého zapojenia
 * možnosť tvorby odvodených a nových komponentov
 
-Vytvorený obrázok môžeme exportovať v rastrovom formáte (\*.png, \*.jpg), vektorovom (\*.svg, \*.ps) alebo priamo v makrách *TikZ*.
+Vytvorený obrázok môžeme exportovať v rastrovom formáte (\*.png, \*.jpg), vektorovom (\*.svg, \*.ps) alebo priamo v makrách *TikZ*. Tvorbe elektronických zapojení pomocou *CircuitMacros* je venovaná publikácia [Tecnická grafika](https://lab-411.github.io/Technicka_Grafika/_build/html/index.html).
 
 ### <font color='#E37434'> Tvorba zapojení pomocou externého editora </font>
 

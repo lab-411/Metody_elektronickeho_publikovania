@@ -23,7 +23,7 @@ Vektorová grafika reprezentuje obrazovú informáciu pomocou definovaných útv
 
 V dokumentoch na platforme *Sphinx* môžeme vektorovú grafiku zobrazovať pomocou makier *PGF/TikZ* niekoľkými spôsobmi: 
 
-* Kód jednoduchších obrázkov vytvoríme priamo pomocou makier *TikZ* v zdrojovok texte dokumentu.
+* Kód jednoduchších obrázkov vytvoríme priamo pomocou makier *TikZ* v zdrojovom texte dokumentu.
 * Zdrojový kód obrázku získame vytvorením obrázku niektorom z v lokálnych editoroch podporujúcich syntax makier *TikZ* ako [KtikZ](https://github.com/fhackenberger/ktikz), [TikZitT](https://tikzit.github.io/) alebo v on-line editoroch, napríklad [TikZ Editor](https://app.texpile.com/tools/tikz-editor).
 * Vytvorením obrázku v univerzálnych grafických programoch a knižniciach a ich exportom do formátu makier *PGF/TikZ*, napríklad [Inkscape](https://inkscape.org/) a mnohé ďaľšie.
 * Konverziou vektorových obrázkov z iných grafických formátov do formátu *PGF/TikZ* pomocou špecializovaných konvertorov   
