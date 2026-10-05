@@ -119,13 +119,16 @@ Konfigurácia pre túto publikáciu je v adresármi so zdrojovými kódmmi v sú
 
 ##  <font color='#547792'> Vytvorenie publikácie </font>
 
-Z vytvorenej konfigurácie vygenerujeme publikáciu z príkazom konzoly v pracovnom adresári
-
-      make html
-      
+Z vytvorenej konfigurácie vygenerujeme v konzole publikáciu príkazom *make html* v pracovnom adresári.
 Po úspešnej kompilácii sa v adresári *_build* bude nachádzať podadresár *html* so súborom *index.html* ktorý otvorime v štandardnom www prehliadači.
 
 ```{figure} ./img/sphinx_test.png
 :width: 600px
 Vytvorená predloha publikácie.
 ```
+Po rozsiahlejších úpravách textu a používaní referencií medzi stránkami je vhodné prekopilovať celú publikáciu 
+      
+      make clean
+      make html
+      
+      

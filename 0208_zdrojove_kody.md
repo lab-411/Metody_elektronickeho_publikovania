@@ -120,3 +120,20 @@ for i in range(11):
     print(f' {i:2d}   {pow(i,2): 4d}   {sqrt(i):2.4f}')
 
 ```
+
+```{admonition} Vnorený vykonateľný kód
+:class: warning
+
+Direktívu *{code-cell}* nie je možné vnárať do iných direktív, kód programu bude ignorovaný.
+
+    ````{admonition} Upozornenie
+    :class: note
+    
+    ```{code-cell} ipython3  
+    kod vykonatelneho programu 
+      
+    ```
+    ````
+
+
+```
