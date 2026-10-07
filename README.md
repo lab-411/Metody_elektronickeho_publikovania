@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/:Electronic publishing)
+![Static Badge](https://img.shields.io/badge/:Electronic-publishing)
 
 # Metody_elektronickeho_publikovania
 A book on electronic publishing methods on the Sphinx platform
