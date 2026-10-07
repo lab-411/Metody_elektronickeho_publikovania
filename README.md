@@ -1,4 +1,5 @@
-![Static Badge](https://img.shields.io/badge/:Electronic_publishing)
+![GitHub top language](https://img.shields.io/github/languages/top/:user/:repo)
+
 
 # Metody elektronickeho publikovania
 A book on electronic publishing methods on the Sphinx platform
