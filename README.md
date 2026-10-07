@@ -1,6 +1,6 @@
-![Static Badge](https://img.shields.io/badge/:Electronic5%20publishing)
+![Static Badge](https://img.shields.io/badge/:Electronic_publishing)
 
-# Metody_elektronickeho_publikovania
+# Metody elektronickeho publikovania
 A book on electronic publishing methods on the Sphinx platform
 
 
